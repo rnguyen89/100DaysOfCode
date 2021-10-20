@@ -37,7 +37,7 @@ const random = () => {
 
 const updateSection = () => {
   quoteTag.innerHTML = quotes[state].quote
-  authorTag.innerHTML = quotes[state].author
+  authorTag.innerHTML = "- " + quotes[state].author
   bodyTag.style.backgroundColor = quotes[state].background
 
 }
