@@ -22,4 +22,82 @@
 body {
   font-family: var(--font-manrope);
   line-height: 1.4;
+  max-width: 1440px;
+  background-color: rgba(219, 239, 240, 0.884);
+}
+
+/* flex and center */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.container {
+  margin: 3em 2em;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  height: 360px;
+}
+.container-image {
+  background: #ffffff url("/images/drawers.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  /* height: 500px; */
+  /* height: 415px; */
+  object-fit: cover;
+}
+
+.container-content {
+  padding: 2em;
+  background-color: white;
+}
+
+h2.headline {
+  color: var(--dark-gray-blue);
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+p.content {
+  color: var(--dark-desat-blue);
+  font-size: 1em;
+  font-weight: 500;
+  margin: 16px 0;
+}
+
+div.container-author {
+  display: flex;
+  justify-content: space-between;
+}
+
+.author {
+  display: flex;
+}
+
+.headshot-author {
+  border-radius: 50%;
+  width: 80px;
+  margin-right: 16px;
+}
+
+.info-author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name-author {
+  color: var(--dark-gray-blue);
+  font-weight: 700;
+}
+
+.date-author {
+  color: var(--dark-desat-blue);
+
+}
+
+.btn-author {
+  align-self: center;
 }
