@@ -23,6 +23,7 @@ body {
   font-family: var(--font-manrope);
   line-height: 1.4;
   max-width: 1440px;
+  margin: 0 auto;
   background-color: rgba(219, 239, 240, 0.884);
 }
 
@@ -37,7 +38,7 @@ section.container {
   margin: 3em 2em;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  height: 360px;
+  /* height: 360px; */
 }
 .container-image {
   background: #ffffff url("/images/drawers.jpg") no-repeat center;
@@ -45,6 +46,7 @@ section.container {
   width: 100%;
   height: 100%;
   /* height: 500px; */
+  height: 360px;
   /* height: 415px; */
   object-fit: cover;
 }
@@ -100,4 +102,11 @@ div.container-author {
 
 .btn-author {
   align-self: center;
+}
+
+/* mobile  */
+@media (max-width: 812px) {
+  section.container {
+    flex-wrap: wrap;
+  }
 }
