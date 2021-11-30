@@ -25,6 +25,7 @@
 body {
   font-family: var(--font-manrope);
   line-height: 1.4;
+  background-color: lightskyblue;
 }
 
 .grid-container {
