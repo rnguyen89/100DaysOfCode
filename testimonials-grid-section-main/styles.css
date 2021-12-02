@@ -107,6 +107,10 @@ body {
   font-weight: 600;
 }
 
+.client-verified {
+  font-size: 14px;
+}
+
 .client-container img {
   border-radius: 50%;
 }
@@ -114,7 +118,25 @@ body {
 .client-subheader {
   font-family: var(--font-barlow);
   font-weight: 600;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.1;
   margin: 16px 0;
+}
+
+@media (max-width: 863px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1156px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+      "card-1 card-1 card-2"
+      "card-3 card-4 card-4"
+      "card-5 card-5 card-5";
+  }
 }
