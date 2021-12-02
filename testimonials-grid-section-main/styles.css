@@ -25,6 +25,7 @@
 body {
   font-family: var(--font-manrope);
   line-height: 1.4;
+  margin: 32px;
 }
 
 .grid-container {
@@ -40,29 +41,58 @@ body {
 
 .card-1 {
   grid-area: card-1;
+  background-color: #733FC8;
 }
 
 .card-2 {
   grid-area: card-2;
+  background-color: #49556B;
 }
 
 .card-3 {
   grid-area: card-3;
+  background-color: #fff;
 }
 
 .card-4 {
   grid-area: card-4;
+  background-color: #18202E;
 }
 
 .card-5 {
   grid-area: card-5;
+  background-color: #fff;
 }
 
 .card {
-  background-color: lightgray;
+  /* background-color: lightgray; */
   padding: 24px;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.card-1,
+.card-2,
+.card-4 {
+  color: #fff
+}
+
+.card-1 .client-container .client-detail .client-verified,
+.card-2 .client-container .client-detail .client-verified,
+.card-4 .client-container .client-detail .client-verified {
+  color: #C4CDDC;
+}
+
+.card-3,
+.card-5 {
+  color: #5D626A;
+}
+
+.card-3 .client-container .client-detail .client-verified,
+.card-5 .client-container .client-detail .client-verified {
+  color: #7F8287;
+}
+
 
 .client-container {
   display: flex;
