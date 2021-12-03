@@ -1,0 +1,29 @@
+header {
+  text-align: center;
+  margin: 64px 0;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  color: rgb(107, 107, 107);
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+a {
+  width: 33.333%;
+  padding: 10px;
+  transition: border-color 0.5s;
+}
+
+a img {
+  width: 360px;
+  height: 360px;
+}
