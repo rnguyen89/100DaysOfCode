@@ -33,7 +33,7 @@ body {
 .testimonial-2 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin: 40px 24px;
+  margin: 40px 100px;
 }
 
 .testimonial-container,
@@ -43,13 +43,17 @@ body {
 
 } 
 
+.testimonial-user-container {
+  display: flex;
+}
+
 /* .testimonial-container,
 .testimonial-user-img {
   width: 50%;
 } */
 
 .testimonial-container {
-  grid-column: 1 / 5;
+  grid-column: 1 / 4;
   z-index: 2;
 }
 
