@@ -53,6 +53,11 @@ a {
   text-decoration: none;
 }
 
+.selected {
+  background-color: var(--strong-cyan) !important;
+  color: var(--very-dark-cyan);
+}
+
 .container {
   display: flex;
   justify-content: center;
