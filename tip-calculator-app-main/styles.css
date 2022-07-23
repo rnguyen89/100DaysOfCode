@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* to use
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Space Mono', monospace;
+*/
+
+:root {
+  /* typography */
+  --space-mono: "Space Mono", monospace;
+  --lg-body: 24px;
+  --md-body: 18px;
+  --sm-body: 14px;
+
+  /* primary color */
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  /* neutral color */
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  /* desktop */
+  --desktop-size: 1440px;
+
+  /* mobile */
+  --mobile-size: 375px;
+}
+
+body {
+  background-color: var(--light-grayish-cyan);
+  font-family: var(--space-mono);
+}
