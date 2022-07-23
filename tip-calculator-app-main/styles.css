@@ -43,9 +43,20 @@ header {
   font-weight: 700;
 }
 
+.container {
+  /* margin: 0 auto;
+  width: 100%; */
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+}
+
 .container-card {
   border: red solid 1px;
-  padding: 10px;
+  background-color: var(--white);
+  display: flex;
+  gap: 12px;
+  padding: 16px;
 }
 
 .container-form {
@@ -76,6 +87,8 @@ header {
 
 input[type="text"] {
   border: none;
+  background-color: transparent;
   text-align: right;
   font-weight: 700;
+  /* width: 100%; */
 }
