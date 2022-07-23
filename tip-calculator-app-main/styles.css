@@ -133,7 +133,7 @@ a {
   color: var(--strong-cyan);
 }
 
-input[type="text"] {
+input[type="number"] {
   border: none;
   background-color: transparent;
   box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
@@ -141,6 +141,7 @@ input[type="text"] {
   text-align: right;
   font-weight: 700;
   width: 94%;
+  color: var(--very-dark-cyan);
 }
 
 .input-icon {
