@@ -43,52 +43,125 @@ header {
   font-weight: 700;
 }
 
+h3 {
+  margin-bottom: 8px;
+}
+
+a {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .container {
-  /* margin: 0 auto;
-  width: 100%; */
   display: flex;
-  padding: 16px;
   justify-content: center;
 }
 
 .container-card {
-  border: red solid 1px;
   background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
   gap: 12px;
-  padding: 16px;
+  padding: 16px 24px;
+  width: 100%;
+  max-width: 960px;
 }
 
 .container-form {
-  border: blue solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 10px;
+  width: 50%;
 }
 
 .container-tip {
-  border: purple solid 1px;
-  padding: 10px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .container-tip a {
-  width: 33.333%;
+  width: 32.333333%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.tip-btn {
+  background-color: var(--very-dark-cyan);
+  padding: 8px 4px;
+  margin: 8px 4px 4px 0;
 }
 
 .container-results {
   border: green solid 1px;
-  padding: 10px;
+  border-radius: 10px;
+
+  background-color: var(--very-dark-cyan);
+  padding: 24px;
+  width: 50%;
 }
 
 .container-amount {
-  border: orange solid 1px;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-amount h3 {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.person-results {
+  color: var(--strong-cyan);
+  line-height: 1.4;
+}
+
+.total {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--strong-cyan);
 }
 
 input[type="text"] {
   border: none;
   background-color: transparent;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
+    rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
   text-align: right;
   font-weight: 700;
-  /* width: 100%; */
+  width: 94%;
+}
+
+.input-icon {
+  opacity: 0.2;
+}
+
+#btn-reset {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  text-transform: uppercase;
+  display: block;
+  align-self: flex-end;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 24px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
