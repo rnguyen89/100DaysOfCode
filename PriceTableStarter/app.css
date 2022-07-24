@@ -1,6 +1,77 @@
-.panel {
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #60a9ff;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+
+.panel {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 25px;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(0, 126, 243);
+  margin: 48px 24px;
+}
+
+.pricing-plan {
+  border-bottom: 1px solid #e1f1ff;
+  padding: 24px 0 48px 0;
+}
+
+.pricing-plan:last-child {
+  border-bottom: none;
+}
+
+/* .pricing-features {
+  border-top: 1px solid #e1f1ff;
+} */
+
+.pricing-features-item {
+  border-top: 1px solid #e1f1ff;
+  padding: 24px 0;
+}
+
+.pricing-features-item:last-child {
+  border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-price {
+  display: block;
+  margin-bottom: 24px;
+  padding: 24px 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.pricing-header {
+  margin: 24px 0 48px;
+  font-weight: 700;
+  color: #9c9c9c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+li {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.pricing-button {
+  text-decoration: none;
+  color: #60a9ff;
+  padding: 8px 32px;
+  border: solid 1px #60a9ff;
+  border-radius: 10px;
+}
+
+.is-featured {
+  color: white;
+  background-color: #60a9ff;
 }
