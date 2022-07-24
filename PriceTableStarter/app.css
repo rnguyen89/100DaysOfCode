@@ -75,3 +75,22 @@ li {
   color: white;
   background-color: #60a9ff;
 }
+
+@media (min-width: 800px) {
+  .panel {
+    flex-direction: row;
+    /* gap: 48px; */
+    max-width: 800px;
+  }
+
+  .pricing-plan {
+    border-right: 1px solid #e1f1ff;
+
+    border-bottom: none;
+    padding: 32px;
+  }
+
+  .pricing-plan:last-child {
+    border-right: none;
+  }
+}
