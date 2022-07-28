@@ -53,11 +53,6 @@ a {
   text-decoration: none;
 }
 
-.selected {
-  background-color: var(--strong-cyan) !important;
-  color: var(--very-dark-cyan);
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -99,6 +94,11 @@ a {
   background-color: var(--very-dark-cyan);
   padding: 8px 4px;
   margin: 8px 4px 4px 0;
+}
+
+.tip-btn:hover {
+  background-color: var(--strong-cyan) !important;
+  color: var(--very-dark-cyan);
 }
 
 .container-results {
