@@ -15,31 +15,29 @@ const tipBtnCustom = document.querySelector(".tip-btn-custom");
 
 // get tipbtn nodelist using foreach
 // add click event to all tipbtns
-// create function to calulate tip
+// create function to calculate tip
 // calculate tip % with total bill
 
 tipBtns.forEach((tipBtn) => {
   tipBtn.addEventListener("click", function () {
+    tipBtn.classList.toggle("selected");
     let value = this.getAttribute("value");
-    billConversion(value);
+    tipConversion(value);
 
     console.log(parseFloat(value));
   });
 });
 
-tipBtn5.addEventListener("click", function (e) {
-  // let value = this.getAttribute("value");
-  // console.log(parseFloat(value) * 142.55);
-});
+tipBtn5.addEventListener("click", function () {});
 tipBtn10.addEventListener("click", function () {});
 tipBtn15.addEventListener("click", function () {});
 tipBtn25.addEventListener("click", function () {});
 tipBtn50.addEventListener("click", function () {});
 tipBtnCustom.addEventListener("click", function () {});
 
-// get total bill
+// get tip amount / person
 
-function billConversion(tip) {
+function tipConversion(tip) {
   bill.addEventListener("keyup", function (x) {
     let calculation = this.value;
     totalTip.textContent = this.value * tip;
@@ -49,6 +47,16 @@ function billConversion(tip) {
 }
 
 // get total number of people
+function party(people) {
+  numOfPeople.addEventListener("keyup", function () {
+    let partyTotal = this.value;
+    totalPerson.textContent = this.value;
+
+    console.log(partyTotal);
+  });
+}
+
+party();
 
 // reset input values
 
@@ -59,7 +67,7 @@ function billConversion(tip) {
 //   return parseFloat(result);
 // });
 
-// let tip = numOfPeople.addEventListener("keyup", function () {
+// let party2 = numOfPeople.addEventListener("keyup", function () {
 //   let result =
 //     (parseInt(bill.value) + parseInt(totalTip) * 0.05) / numOfPeople.value;
 
