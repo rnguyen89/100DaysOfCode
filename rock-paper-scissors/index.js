@@ -12,7 +12,7 @@ function getComputerChoice() {
   return selection;
 }
 
-const playerSelection = "Rock";
+const playerSelection = prompt(`please type "rock", "paper", or "scissor"`);
 const computerSelection = getComputerChoice();
 
 console.log(computerSelection);
