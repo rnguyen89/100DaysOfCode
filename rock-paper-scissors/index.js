@@ -8,14 +8,29 @@ function playRound(playerSelection, computerSelection) {
   // your code here!
   console.log(playerSelection.toLowerCase() + " " + computerSelection);
   if (playerSelection === computerSelection) {
-    console.log("TIE");
+    console.log("TIE!");
   } else if (
     (playerSelection === "rock" && computerSelection === "scissor") ||
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissor" && computerSelection === "paper")
   ) {
-    console.log("You win");
-  } else console.log("YOU LOSE!");
+    console.log(
+      "You Win! " +
+        playerSelection.charAt(0).toUpperCase() +
+        playerSelection.slice(1) +
+        " beats " +
+        computerSelection.charAt(0).toUpperCase() +
+        computerSelection.slice(1)
+    );
+  } else
+    console.log(
+      "You Lose! " +
+        computerSelection.charAt(0).toUpperCase() +
+        computerSelection.slice(1) +
+        " beats " +
+        playerSelection.charAt(0).toUpperCase() +
+        playerSelection.slice(1)
+    );
 }
 
 function getComputerChoice() {
