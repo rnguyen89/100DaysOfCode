@@ -1,6 +1,24 @@
 console.log("hello world!");
 
-const choice = ["rock", "paper", "scissor"];
+const choice = [
+  {
+    name: "rock",
+    win: "rock beats scissor",
+    lose: "rock lose paper",
+  },
+
+  {
+    name: "paper",
+    win: "paper beats rock",
+    lose: "paper lose scissor",
+  },
+
+  {
+    name: "scissor",
+    win: "scissor beats paper",
+    lose: "scissor lose rock",
+  },
+];
 
 let i = 0;
 
@@ -35,7 +53,7 @@ let i = 0;
 
 function playRound(playerSelection, computerSelection) {
   // your code here!
-  console.log(playerSelection + " " + computerSelection);
+  console.log(playerSelection + " " + computerSelection.name);
 }
 
 function getComputerChoice() {
