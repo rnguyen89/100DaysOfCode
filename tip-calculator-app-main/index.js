@@ -52,9 +52,13 @@ function tipConversion(tip, person) {
   bill.addEventListener("keyup", function () {
     let bill = this.value;
     console.log(`bill: ${bill}`);
-    totalTip.textContent = bill * (tip / person);
+    let n = bill * (tip / person);
+    let rounded = Math.round(n * 100) / 100;
+    totalTip.textContent = rounded;
+    // totalTip.textContent = bill * (tip / person);
     // console.log(parseFloat(result));
     return parseFloat(bill);
+    // return parseFloat(bill);
   });
 }
 
