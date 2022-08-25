@@ -31,9 +31,11 @@ tipBtns.forEach((tipBtn) => {
     }
 
     let value = this.getAttribute("value");
-    tipConversion(value);
-    party(value);
-    console.log(parseFloat(value));
+    // const totalPerson = numOfPeople.value;
+    const tipAmount = tipConversion(value, numOfPeople.value);
+    // const partyAmount = party(value);
+    console.log(`person: ${tipAmount}`);
+    console.log(parseFloat(tipAmount));
   });
 });
 
@@ -46,11 +48,11 @@ tipBtnCustom.addEventListener("click", function () {});
 
 // get tip amount / person
 
-function tipConversion(tip) {
+function tipConversion(tip, person) {
   bill.addEventListener("keyup", function () {
     let bill = this.value;
     console.log(`bill: ${bill}`);
-    totalTip.textContent = bill * tip;
+    totalTip.textContent = bill * (tip / person);
     // console.log(parseFloat(result));
     return parseFloat(bill);
   });
