@@ -53,8 +53,13 @@ let i = 0;
 
 function playRound(playerSelection, computerSelection) {
   // your code here!
+
   console.log(playerSelection + " " + computerSelection.name);
 }
+
+// function playerSelection() {
+//   prompt(`please type "rock", "paper", or "scissor"`);
+// }
 
 function getComputerChoice() {
   return choice[Math.floor(Math.random() * choice.length)];
@@ -62,14 +67,15 @@ function getComputerChoice() {
 
 function game() {
   for (let i = 0; i < 5; i++) {
+    let playerSelection = prompt(`please type "rock", "paper", or "scissor"`);
+
     const computerSelection = getComputerChoice();
 
     console.log(playRound(playerSelection, computerSelection));
   }
 }
 
-// const playerSelection = prompt(`please type "rock", "paper", or "scissor"`);
-const playerSelection = "rock";
+// const playerSelection = "rock";
 // game();
 
 // console.log(playRound(playerSelection, computerSelection));
