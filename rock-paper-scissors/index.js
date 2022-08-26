@@ -20,6 +20,9 @@ const choice = [
   },
 ];
 
+let playerScore = 0;
+let computerScore = 0;
+
 let i = 0;
 
 // function playRound(playerSelection, computerSelection) {
@@ -62,7 +65,7 @@ function playRound(playerSelection, computerSelection) {
 // }
 
 function getComputerChoice() {
-  return choice[Math.floor(Math.random() * choice.length)];
+  return choice[Math.floor(Math.random() * choice.length)].name;
 }
 
 function game() {
@@ -70,8 +73,25 @@ function game() {
     let playerSelection = prompt(`please type "rock", "paper", or "scissor"`);
 
     const computerSelection = getComputerChoice();
+    console.log(computerSelection);
 
-    console.log(playRound(playerSelection, computerSelection));
+    if (playerSelection === computerSelection) {
+      console.log("TIE!");
+    } else if (
+      (playerSelection === "rock" && computerSelection === "scissor") ||
+      (playerSelection === "paper" && computerSelection === "rock") ||
+      (playerSelection === "scissor" && computerSelection === "paper")
+    ) {
+      console.log(
+        "You Win! " + playerSelection + " beats " + computerSelection
+      );
+    } else {
+      console.log(
+        "You Lose! " + computerSelection + " beats " + playerSelection
+      );
+
+      // console.log(playRound(playerSelection, computerSelection));
+    }
   }
 }
 
