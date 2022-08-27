@@ -1,5 +1,3 @@
-console.log("hello world!");
-
 const choice = [
   {
     name: "rock",
@@ -70,24 +68,48 @@ function getComputerChoice() {
 
 function game() {
   for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt(`please type "rock", "paper", or "scissor"`);
+    // let playerSelection = prompt(`please type "rock", "paper", or "scissor"`);
+    let playerSelection = "rock";
 
     const computerSelection = getComputerChoice();
-    console.log(computerSelection);
+    // console.log("player: " + playerSelection);
+
+    // console.log("computer: " + computerSelection);
+    console.log("-" + "\n" + "-" + "\n");
 
     if (playerSelection === computerSelection) {
-      console.log("TIE!");
+      console.log(
+        "TIE!" +
+          "\n" +
+          "player: " +
+          playerSelection +
+          " ties with " +
+          "computer: " +
+          computerSelection
+      );
     } else if (
       (playerSelection === "rock" && computerSelection === "scissor") ||
       (playerSelection === "paper" && computerSelection === "rock") ||
       (playerSelection === "scissor" && computerSelection === "paper")
     ) {
       console.log(
-        "You Win! " + playerSelection + " beats " + computerSelection
+        "You Win!" +
+          "\n" +
+          "player: " +
+          playerSelection +
+          " beats " +
+          "computer: " +
+          computerSelection
       );
     } else {
       console.log(
-        "You Lose! " + computerSelection + " beats " + playerSelection
+        "You Lose!" +
+          "\n" +
+          "computer: " +
+          computerSelection +
+          " beats " +
+          "player: " +
+          playerSelection
       );
 
       // console.log(playRound(playerSelection, computerSelection));
