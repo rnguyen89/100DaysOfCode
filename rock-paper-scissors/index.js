@@ -3,8 +3,11 @@ const paperEl = document.querySelector("#paper-btn");
 const scissorEl = document.querySelector("#scissor-btn");
 
 const winnerEl = document.querySelector("#winner");
-const playerScore = document.querySelector("#player-score");
-const computerScore = document.querySelector("#computer-score");
+const playerScoreEl = document.querySelector("#player-score");
+const computerScoreEl = document.querySelector("#computer-score");
+
+let playerScore = 0;
+let computerScore = 0;
 
 const choice = [
   {
@@ -26,63 +29,78 @@ const choice = [
   },
 ];
 
-// let playerScore = 0;
-// let computerScore = 0;
+// 1. create function that will run when selection is clicked
+// 2. trigger the computer choice
 
-function playRound(playerSelection, computerSelection) {
-  // your code here!
+// 3. compare player and computer choice to see who won
+// 4. add point to winner
+// 5. hide game container
+// 6. create start btn to trigger game start
+// 7. create game fn to track first to 5 wins
+// 8. create final score fn to display results
+// 9. create reset button that will wipe scores and reload to start screen
+// 10. once features implemented, style the UI
 
-  if (playerSelection === computerSelection) {
-    console.log(
-      "TIE!" +
-        "\n" +
-        "player: " +
-        playerSelection +
-        " ties with " +
-        "computer: " +
-        computerSelection
-    );
-  } else if (
-    (playerSelection === "rock" && computerSelection === "scissor") ||
-    (playerSelection === "paper" && computerSelection === "rock") ||
-    (playerSelection === "scissor" && computerSelection === "paper")
-  ) {
-    console.log(
-      "You Win!" +
-        "\n" +
-        "player: " +
-        playerSelection +
-        " beats " +
-        "computer: " +
-        computerSelection
-    );
-  } else {
-    console.log(
-      "You Lose!" +
-        "\n" +
-        "computer: " +
-        computerSelection +
-        " beats " +
-        "player: " +
-        playerSelection
-    );
-  }
-}
+//////////////////////////////////////////////////////
 
-function getComputerChoice() {
-  return choice[Math.floor(Math.random() * choice.length)].name;
-}
+// this is V1 where we log each game to console
 
-function game() {
-  for (let i = 0; i < 5; i++) {
-    // let playerSelection = prompt(`please type "rock", "paper", or "scissor"`);
-    let playerSelection = "rock";
-    const computerSelection = getComputerChoice();
+// function playRound(playerSelection, computerSelection) {
+//   // your code here!
 
-    playRound(playerSelection, computerSelection);
+//   if (playerSelection === computerSelection) {
+//     console.log(
+//       "TIE!" +
+//         "\n" +
+//         "player: " +
+//         playerSelection +
+//         " ties with " +
+//         "computer: " +
+//         computerSelection
+//     );
+//   } else if (
+//     (playerSelection === "rock" && computerSelection === "scissor") ||
+//     (playerSelection === "paper" && computerSelection === "rock") ||
+//     (playerSelection === "scissor" && computerSelection === "paper")
+//   ) {
+//     console.log(
+//       "You Win!" +
+//         "\n" +
+//         "player: " +
+//         playerSelection +
+//         " beats " +
+//         "computer: " +
+//         computerSelection
+//     );
+//   } else {
+//     console.log(
+//       "You Lose!" +
+//         "\n" +
+//         "computer: " +
+//         computerSelection +
+//         " beats " +
+//         "player: " +
+//         playerSelection
+//     );
+//   }
+// }
 
-    console.log("-" + "\n" + "-" + "\n");
-  }
-}
+// function getComputerChoice() {
+//   return choice[Math.floor(Math.random() * choice.length)].name;
+// }
 
-game();
+// function game() {
+//   for (let i = 0; i < 5; i++) {
+//     // let playerSelection = prompt(`please type "rock", "paper", or "scissor"`);
+//     let playerSelection = "rock";
+//     const computerSelection = getComputerChoice();
+
+//     playRound(playerSelection, computerSelection);
+
+//     console.log("-" + "\n" + "-" + "\n");
+//   }
+// }
+
+// game();
+
+//////////////////////////////////////////////////////
