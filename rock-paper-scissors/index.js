@@ -1,3 +1,11 @@
+const rockEl = document.querySelector("#rock-btn");
+const paperEl = document.querySelector("#paper-btn");
+const scissorEl = document.querySelector("#scissor-btn");
+
+const winnerEl = document.querySelector("#winner");
+const playerScore = document.querySelector("#player-score");
+const computerScore = document.querySelector("#computer-score");
+
 const choice = [
   {
     name: "rock",
@@ -18,8 +26,8 @@ const choice = [
   },
 ];
 
-let playerScore = 0;
-let computerScore = 0;
+// let playerScore = 0;
+// let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
   // your code here!
