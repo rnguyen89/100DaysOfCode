@@ -29,6 +29,21 @@ const choice = [
   },
 ];
 
+function renderPlayerScore(num) {
+  num++;
+  console.log(`Player score: ${num}`);
+}
+
+function renderComputerScore(num) {
+  num++;
+  console.log(`Computer score: ${num}`);
+}
+
+rockEl.addEventListener("click", function () {
+  console.log(renderPlayerScore(playerScore++));
+  console.log(renderComputerScore(computerScore++));
+});
+
 // 1. create function that will run when selection is clicked
 // 2. trigger the computer choice
 
