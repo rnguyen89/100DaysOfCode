@@ -2,3 +2,19 @@ body {
   background-color: rgb(35, 35, 35);
   color: whitesmoke;
 }
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.pokemon-container div {
+  border-right: 2px solid red;
+}
+
+p {
+  text-align: center;
+}

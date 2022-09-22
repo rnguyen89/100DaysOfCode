@@ -14,11 +14,11 @@ const pokemon144 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/spr
 // increment num to set pokemon
 // append to pokemon container
 
-function pokemonLoop(x) {
+function pokemonLoop(x, i) {
   for (let i = 1; i <= x; i++) {
     const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`;
     console.log(url);
-    renderPokemon(url);
+    renderPokemon(url, i);
   }
 }
 
@@ -26,13 +26,18 @@ function createImg(url) {
   img = document.createElement("img");
 }
 
-function renderPokemon(url) {
+function renderPokemon(url, i) {
+  const div = document.createElement("div");
+  const p = document.createElement("p");
+  p.textContent = `# ${i}`;
   const img = document.createElement("img");
   img.setAttribute("src", url);
   img.setAttribute("alt", "pokemon sprite");
 
-  pokemonContainer.appendChild(img);
+  div.append(img, p);
+
+  pokemonContainer.appendChild(div);
 }
 
 // renderPokemon();
-pokemonLoop(150);
+pokemonLoop(251);
