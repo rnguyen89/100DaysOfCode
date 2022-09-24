@@ -3,6 +3,7 @@ console.log("hello from index");
 const pokemonContainer = document.getElementById("pokemons-container");
 const pokeForm = document.getElementById("pokeform");
 const formValue = document.getElementById("form-value");
+const btn = document.getElementById("btn");
 
 let num = 150;
 const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${num}.png`;
@@ -27,12 +28,18 @@ function pokemonLoop(x, i) {
   }
 }
 
+// function handleClick(e) {
+//   // e.preventDefault();
+//   formValue.value = "";
+//   console.log("btn clicked");
+// }
+
 function handleSubmit(e, value) {
   e.preventDefault();
-
   value = formValue.value;
-  console.log(`${value} form is clicked`);
+
   pokemonLoop(value);
+  formValue.value = "";
 }
 
 function createImg(url) {
@@ -57,4 +64,5 @@ function renderPokemon(url, i) {
 // renderPokemon();
 // pokemonLoop(3);
 
+// btn.addEventListener("click", handleClick);
 pokeForm.addEventListener("submit", handleSubmit);

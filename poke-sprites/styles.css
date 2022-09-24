@@ -17,8 +17,9 @@ body {
   margin: 8% 4%;
 }
 
-.container label {
+h1 {
   font-size: 64px;
+  margin-bottom: 2%;
 }
 
 #poke-form {
