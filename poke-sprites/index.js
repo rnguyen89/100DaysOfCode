@@ -2,8 +2,10 @@ console.log("hello from index");
 
 const pokemonContainer = document.getElementById("pokemons-container");
 const pokeForm = document.getElementById("pokeform");
-const formValue = document.getElementById("form-value");
+const input1 = document.getElementById("input-1");
+const input2 = document.getElementById("input-2");
 const btn = document.getElementById("btn");
+const btn2 = document.getElementById("btn2");
 const pokemons = document.querySelectorAll(".pokemon");
 
 let num = 150;
@@ -21,6 +23,10 @@ const pokemon144 = `https://raw.githubusercontent.com/PokeAPI/sprites/master/spr
 //// increment num to set pokemon
 //// append to pokemon container
 
+// refactor code to target form options
+// should be able to render 1 pokemon base on num
+// should render total pokemon base on num
+
 function pokemonLoop(x, i) {
   for (let i = 1; i <= x; i++) {
     const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`;
@@ -29,17 +35,29 @@ function pokemonLoop(x, i) {
   }
 }
 
-function handleSubmit(e, value) {
-  e.preventDefault();
-  value = formValue.value;
-  pokemonContainer.innerHTML = "";
-
-  pokemonLoop(value);
-  formValue.value = "";
+function render1(i) {
+  const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`;
+  console.log(url);
+  renderPokemon(url, i);
 }
 
-function createImg(url) {
-  img = document.createElement("img");
+function handleSubmit(e, value, value2) {
+  e.preventDefault();
+  value = input1.value;
+  value2 = input2.value;
+  pokemonContainer.innerHTML = "";
+
+  if (value != "") {
+    pokemonLoop(value);
+  }
+
+  if (value2 != "") {
+    console.log("input 2 clicked");
+    render1(value2);
+  }
+
+  input1.value = "";
+  input2.value = "";
 }
 
 function renderPokemon(url, i) {
