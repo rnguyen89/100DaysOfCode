@@ -5,6 +5,7 @@ const scissorEl = document.querySelector("#scissor-btn");
 const winnerEl = document.querySelector("#winner");
 const playerScoreEl = document.querySelector("#player-score");
 const computerScoreEl = document.querySelector("#computer-score");
+const computerSelectionEl = document.querySelector("#computer-selection");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -32,14 +33,31 @@ const choice = [
 function renderPlayerScore(num) {
   num++;
   console.log(`Player score: ${num}`);
+  playerScoreEl.textContent = `Player score: ${num}`;
 }
 
 function renderComputerScore(num) {
   num++;
   console.log(`Computer score: ${num}`);
+  computerScoreEl.textContent = `Computer score: ${num}`;
+}
+
+function getComputerChoice() {
+  return choice[Math.floor(Math.random() * choice.length)].name;
 }
 
 rockEl.addEventListener("click", function () {
+  console.log(renderPlayerScore(playerScore++));
+  console.log(renderComputerScore(computerScore++));
+  computerSelectionEl.textContent = getComputerChoice();
+});
+
+paperEl.addEventListener("click", function () {
+  console.log(renderPlayerScore(playerScore++));
+  console.log(renderComputerScore(computerScore++));
+});
+
+scissorEl.addEventListener("click", function () {
   console.log(renderPlayerScore(playerScore++));
   console.log(renderComputerScore(computerScore++));
 });
