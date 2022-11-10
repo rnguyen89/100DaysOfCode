@@ -101,6 +101,11 @@ a {
   color: var(--very-dark-cyan);
 }
 
+.tip-btn:active {
+  background-color: var(--strong-cyan) !important;
+  color: var(--very-dark-cyan);
+}
+
 .container-results {
   border: green solid 1px;
   border-radius: 10px;

@@ -21,7 +21,7 @@ const tipBtnCustom = document.querySelector(".tip-btn-custom");
 
 tipBtns.forEach((tipBtn) => {
   tipBtn.addEventListener("click", function (e) {
-    if (bill.value === "" || numOfPeople === "") {
+    if (bill.value === "" && numOfPeople === "") {
       bill.style.border = "1px solid red";
       numOfPeople.style.border = "1px solid red";
       alert("cant be blank");
