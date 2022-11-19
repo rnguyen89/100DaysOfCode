@@ -6,6 +6,7 @@ const winnerEl = document.querySelector("#winner");
 const playerScoreEl = document.querySelector("#player-score");
 const computerScoreEl = document.querySelector("#computer-score");
 const computerSelectionEl = document.querySelector("#computer-selection");
+const playerSelectionEl = document.querySelector("#player-selection");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -34,12 +35,20 @@ function renderPlayerScore(num) {
   num++;
   console.log(`Player score: ${num}`);
   playerScoreEl.textContent = `Player score: ${num}`;
+
+  if (num === 5) {
+    alert("player wins!");
+  }
 }
 
 function renderComputerScore(num) {
   num++;
   console.log(`Computer score: ${num}`);
   computerScoreEl.textContent = `Computer score: ${num}`;
+
+  if (num === 5) {
+    alert("computer wins!");
+  }
 }
 
 function getComputerChoice() {
@@ -48,6 +57,9 @@ function getComputerChoice() {
 
 rockEl.addEventListener("click", function () {
   let computerSelection = getComputerChoice();
+  let playerSelection = "you chose rock";
+
+  playerSelectionEl.textContent = playerSelection;
   computerSelectionEl.textContent = computerSelection;
 
   if (computerSelection === "scissor") {
@@ -63,6 +75,9 @@ rockEl.addEventListener("click", function () {
 
 paperEl.addEventListener("click", function () {
   let computerSelection = getComputerChoice();
+  let playerSelection = "you chose scissor";
+
+  playerSelectionEl.textContent = playerSelection;
   computerSelectionEl.textContent = getComputerChoice();
 
   if (computerSelection === "rock") {
@@ -78,6 +93,9 @@ paperEl.addEventListener("click", function () {
 
 scissorEl.addEventListener("click", function () {
   let computerSelection = getComputerChoice();
+  let playerSelection = "you chose paper";
+
+  playerSelectionEl.textContent = playerSelection;
   computerSelectionEl.textContent = getComputerChoice();
 
   if (computerSelection === "paper") {
