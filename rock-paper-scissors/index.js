@@ -62,15 +62,33 @@ rockEl.addEventListener("click", function () {
 });
 
 paperEl.addEventListener("click", function () {
-  console.log(renderPlayerScore(playerScore++));
-  console.log(renderComputerScore(computerScore++));
+  let computerSelection = getComputerChoice();
   computerSelectionEl.textContent = getComputerChoice();
+
+  if (computerSelection === "rock") {
+    console.log("Player wins!");
+    console.log(renderPlayerScore(playerScore++));
+  } else if (computerSelection === "scissor") {
+    console.log("Computer wins!");
+    console.log(renderComputerScore(computerScore++));
+  } else {
+    console.log("TIE!");
+  }
 });
 
 scissorEl.addEventListener("click", function () {
-  console.log(renderPlayerScore(playerScore++));
-  console.log(renderComputerScore(computerScore++));
+  let computerSelection = getComputerChoice();
   computerSelectionEl.textContent = getComputerChoice();
+
+  if (computerSelection === "paper") {
+    console.log("Player wins!");
+    console.log(renderPlayerScore(playerScore++));
+  } else if (computerSelection === "rock") {
+    console.log("Computer wins!");
+    console.log(renderComputerScore(computerScore++));
+  } else {
+    console.log("TIE!");
+  }
 });
 
 // 1. create function that will run when selection is clicked
