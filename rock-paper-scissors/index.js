@@ -8,6 +8,12 @@ const computerScoreEl = document.querySelector("#computer-score");
 const computerSelectionEl = document.querySelector("#computer-selection");
 const playerSelectionEl = document.querySelector("#player-selection");
 
+const resetEl = document.querySelector("#reset-game");
+
+resetEl.addEventListener("click", function () {
+  window.location.reload();
+});
+
 let playerScore = 0;
 let computerScore = 0;
 
