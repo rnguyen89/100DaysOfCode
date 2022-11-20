@@ -10,6 +10,11 @@ const playerSelectionEl = document.querySelector("#player-selection");
 
 const resetEl = document.querySelector("#reset-game");
 
+// reset should promp modal to show who won the game
+// modal should also include button to reset the game
+// make modal in HTML and hide or dynamically create it?
+// if dynamic, we will have to render it in the IF fn for render player and computer score
+
 resetEl.addEventListener("click", function () {
   window.location.reload();
 });
