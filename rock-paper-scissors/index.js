@@ -49,6 +49,7 @@ function renderPlayerScore(num) {
 
   if (num === 5) {
     alert("player wins!");
+    window.location.reload();
   }
 }
 
@@ -59,6 +60,7 @@ function renderComputerScore(num) {
 
   if (num === 5) {
     alert("computer wins!");
+    window.location.reload();
   }
 }
 
@@ -72,6 +74,7 @@ rockEl.addEventListener("click", function () {
 
   playerSelectionEl.textContent = playerSelection;
   computerSelectionEl.textContent = computerSelection;
+  console.log(computerSelection);
 
   if (computerSelection === "scissor") {
     console.log("Player wins!");
@@ -86,7 +89,8 @@ rockEl.addEventListener("click", function () {
 
 paperEl.addEventListener("click", function () {
   let computerSelection = getComputerChoice();
-  let playerSelection = "you chose scissor";
+  let playerSelection = "you chose paper";
+  console.log(computerSelection);
 
   playerSelectionEl.textContent = playerSelection;
   computerSelectionEl.textContent = getComputerChoice();
@@ -104,7 +108,8 @@ paperEl.addEventListener("click", function () {
 
 scissorEl.addEventListener("click", function () {
   let computerSelection = getComputerChoice();
-  let playerSelection = "you chose paper";
+  let playerSelection = "you chose scissors";
+  console.log(computerSelection);
 
   playerSelectionEl.textContent = playerSelection;
   computerSelectionEl.textContent = getComputerChoice();
