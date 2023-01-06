@@ -74,13 +74,16 @@ rockEl.addEventListener("click", function () {
 
   playerSelectionEl.textContent = playerSelection;
   computerSelectionEl.textContent = computerSelection;
-  console.log(computerSelection);
+
+  console.log(`Computer picked: ${computerSelection}`);
 
   if (computerSelection === "scissor") {
     console.log("Player wins!");
+    console.log(choice[0].win);
     console.log(renderPlayerScore(playerScore++));
   } else if (computerSelection === "paper") {
     console.log("Computer wins!");
+    console.log(choice[0].lose);
     console.log(renderComputerScore(computerScore++));
   } else {
     console.log("TIE!");
@@ -90,16 +93,21 @@ rockEl.addEventListener("click", function () {
 paperEl.addEventListener("click", function () {
   let computerSelection = getComputerChoice();
   let playerSelection = "you chose paper";
-  console.log(computerSelection);
+  console.log(`Computer picked: ${computerSelection}`);
 
   playerSelectionEl.textContent = playerSelection;
-  computerSelectionEl.textContent = getComputerChoice();
+  // computerSelectionEl.textContent = getComputerChoice();
+  computerSelectionEl.textContent = computerSelection;
 
   if (computerSelection === "rock") {
     console.log("Player wins!");
+    console.log(choice[1].win);
+
     console.log(renderPlayerScore(playerScore++));
   } else if (computerSelection === "scissor") {
     console.log("Computer wins!");
+    console.log(choice[1].lose);
+
     console.log(renderComputerScore(computerScore++));
   } else {
     console.log("TIE!");
@@ -109,16 +117,20 @@ paperEl.addEventListener("click", function () {
 scissorEl.addEventListener("click", function () {
   let computerSelection = getComputerChoice();
   let playerSelection = "you chose scissors";
-  console.log(computerSelection);
+  console.log(`Computer picked: ${computerSelection}`);
 
   playerSelectionEl.textContent = playerSelection;
-  computerSelectionEl.textContent = getComputerChoice();
+  // computerSelectionEl.textContent = getComputerChoice();
+  computerSelectionEl.textContent = computerSelection;
 
   if (computerSelection === "paper") {
     console.log("Player wins!");
+    console.log(choice[2].win);
+
     console.log(renderPlayerScore(playerScore++));
   } else if (computerSelection === "rock") {
     console.log("Computer wins!");
+    console.log(choice[2].lose);
     console.log(renderComputerScore(computerScore++));
   } else {
     console.log("TIE!");
