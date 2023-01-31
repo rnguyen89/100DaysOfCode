@@ -9,8 +9,12 @@ body {
   height: 100vh;
 }
 
+span {
+  font-style: italic;
+}
+
 .logo {
-  margin-top: 200px;
+  margin-top: 300px;
   background-color: #000000b3;
   color: #fff;
   text-align: center;
@@ -29,4 +33,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 600px;
+}
+
+.right .content {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 3rem;
+}
+
+.form {
+  padding: 3rem;
+}
+
+.form p {
+  padding-bottom: 6rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  margin-top: 1rem;
 }
