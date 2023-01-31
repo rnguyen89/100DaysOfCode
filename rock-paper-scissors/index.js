@@ -73,19 +73,22 @@ rockEl.addEventListener("click", function () {
   let playerSelection = "you chose rock";
 
   playerSelectionEl.textContent = playerSelection;
-  computerSelectionEl.textContent = computerSelection;
+  // computerSelectionEl.textContent = computerSelection;
 
   console.log(`Computer picked: ${computerSelection}`);
 
   if (computerSelection === "scissor") {
+    computerSelectionEl.textContent = "✌️";
     console.log("Player wins!");
     console.log(choice[0].win);
     console.log(renderPlayerScore(playerScore++));
   } else if (computerSelection === "paper") {
+    computerSelectionEl.textContent = "🖐️";
     console.log("Computer wins!");
     console.log(choice[0].lose);
     console.log(renderComputerScore(computerScore++));
   } else {
+    computerSelectionEl.textContent = "✊";
     console.log("TIE!");
   }
 });
@@ -100,16 +103,19 @@ paperEl.addEventListener("click", function () {
   computerSelectionEl.textContent = computerSelection;
 
   if (computerSelection === "rock") {
+    computerSelectionEl.textContent = "✊";
     console.log("Player wins!");
     console.log(choice[1].win);
 
     console.log(renderPlayerScore(playerScore++));
   } else if (computerSelection === "scissor") {
+    computerSelectionEl.textContent = "✌️";
     console.log("Computer wins!");
     console.log(choice[1].lose);
 
     console.log(renderComputerScore(computerScore++));
   } else {
+    computerSelectionEl.textContent = "🖐️";
     console.log("TIE!");
   }
 });
@@ -124,15 +130,17 @@ scissorEl.addEventListener("click", function () {
   computerSelectionEl.textContent = computerSelection;
 
   if (computerSelection === "paper") {
+    computerSelectionEl.textContent = "🖐️";
     console.log("Player wins!");
     console.log(choice[2].win);
-
     console.log(renderPlayerScore(playerScore++));
   } else if (computerSelection === "rock") {
+    computerSelectionEl.textContent = "✊";
     console.log("Computer wins!");
     console.log(choice[2].lose);
     console.log(renderComputerScore(computerScore++));
   } else {
+    computerSelectionEl.textContent = "✌️";
     console.log("TIE!");
   }
 });
